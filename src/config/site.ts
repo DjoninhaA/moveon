@@ -1,0 +1,42 @@
+/**
+ * Configurações do site
+ * Centralize informações que podem mudar aqui
+ */
+
+export const siteConfig = {
+  name: "Move On",
+  description: "Soluções em software e automação para impulsionar seu negócio",
+  tagline: "Transforme sua empresa com tecnologia inteligente",
+
+  // Links de navegação
+  navigation: [
+    { name: "Serviços", href: "#servicos" },
+    { name: "Benefícios", href: "#beneficios" },
+    { name: "Como Funciona", href: "#como-funciona" },
+    { name: "Contato", href: "#contato" },
+  ],
+
+  // Informações de contato
+  contact: {
+    email: "contato@moveon.com.br",
+    phone: "(11) 99999-9999",
+    whatsapp: "5511999999999", // Número sem formatação para link
+    address: "São Paulo, SP",
+  },
+
+  // Redes sociais
+  social: {
+    linkedin: "https://linkedin.com/company/moveon",
+    github: "https://github.com/moveon",
+    instagram: "https://instagram.com/moveon",
+  },
+
+  // CTAs
+  cta: {
+    primary: "Fale Conosco",
+    secondary: "Saiba Mais",
+  },
+
+  // Mensagem padrão do WhatsApp
+  whatsappMessage: "Olá! Gostaria de saber mais sobre os serviços da Move On.",
+} as const;
