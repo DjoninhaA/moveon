@@ -19,9 +19,9 @@ export const siteConfig = {
   // Informações de contato
   contact: {
     email: "contato@moveon.com.br",
-    phone: "(11) 99999-9999",
-    whatsapp: "5511999999999", // Número sem formatação para link
-    address: "São Paulo, SP",
+    phone: "(45) 99147-3601",
+    whatsapp: "554591473601", // Número sem formatação para link
+    address: "Toledo, Pr",
   },
 
   // Redes sociais
