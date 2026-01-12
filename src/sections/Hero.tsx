@@ -13,6 +13,99 @@ export function Hero() {
         <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/4" />
       </div>
 
+      {/* Decorative Flowing Lines - Left Side */}
+      <div className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 pointer-events-none opacity-30">
+        <svg viewBox="0 0 200 800" className="h-full w-full" preserveAspectRatio="none">
+          <path
+            d="M-50,0 Q100,200 50,400 T-50,800"
+            fill="none"
+            stroke="url(#gradient-left-1)"
+            strokeWidth="2"
+          />
+          <path
+            d="M-30,100 Q120,300 70,500 T-30,900"
+            fill="none"
+            stroke="url(#gradient-left-2)"
+            strokeWidth="1.5"
+          />
+          <path
+            d="M-70,50 Q80,250 30,450 T-70,850"
+            fill="none"
+            stroke="url(#gradient-left-3)"
+            strokeWidth="1"
+          />
+          <defs>
+            <linearGradient id="gradient-left-1" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#6366f1" stopOpacity="0" />
+              <stop offset="30%" stopColor="#6366f1" stopOpacity="0.6" />
+              <stop offset="70%" stopColor="#06b6d4" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#06b6d4" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="gradient-left-2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0" />
+              <stop offset="40%" stopColor="#8b5cf6" stopOpacity="0.4" />
+              <stop offset="60%" stopColor="#6366f1" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="gradient-left-3" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#06b6d4" stopOpacity="0" />
+              <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      {/* Decorative Flowing Lines - Right Side */}
+      <div className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 pointer-events-none opacity-30">
+        <svg viewBox="0 0 200 800" className="h-full w-full" preserveAspectRatio="none">
+          <path
+            d="M250,0 Q100,200 150,400 T250,800"
+            fill="none"
+            stroke="url(#gradient-right-1)"
+            strokeWidth="2"
+          />
+          <path
+            d="M230,100 Q80,300 130,500 T230,900"
+            fill="none"
+            stroke="url(#gradient-right-2)"
+            strokeWidth="1.5"
+          />
+          <path
+            d="M270,50 Q120,250 170,450 T270,850"
+            fill="none"
+            stroke="url(#gradient-right-3)"
+            strokeWidth="1"
+          />
+          <defs>
+            <linearGradient id="gradient-right-1" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#06b6d4" stopOpacity="0" />
+              <stop offset="30%" stopColor="#06b6d4" stopOpacity="0.6" />
+              <stop offset="70%" stopColor="#8b5cf6" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="gradient-right-2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#6366f1" stopOpacity="0" />
+              <stop offset="40%" stopColor="#6366f1" stopOpacity="0.4" />
+              <stop offset="60%" stopColor="#06b6d4" stopOpacity="0.4" />
+              <stop offset="100%" stopColor="#06b6d4" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="gradient-right-3" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0" />
+              <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#06b6d4" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      {/* Floating Dots */}
+      <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/20 rounded-full animate-pulse" />
+      <div className="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-cyan-500/20 rounded-full animate-pulse delay-300" />
+      <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-violet-500/20 rounded-full animate-pulse delay-500" />
+      <div className="absolute top-1/2 right-1/4 w-2.5 h-2.5 bg-primary/15 rounded-full animate-pulse delay-700" />
+      <div className="absolute bottom-1/3 right-1/5 w-1.5 h-1.5 bg-cyan-400/20 rounded-full animate-pulse delay-1000" />
+
       <Container size="wide" className="relative z-10 pt-32 pb-20">
         <div className="max-w-4xl mx-auto text-center">
           {/* Badge */}

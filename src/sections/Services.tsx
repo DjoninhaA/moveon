@@ -58,6 +58,41 @@ export function Services() {
         <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
       </div>
 
+      {/* Decorative Curves - Top */}
+      <div className="absolute top-0 left-0 right-0 h-40 pointer-events-none opacity-20">
+        <svg viewBox="0 0 1200 200" className="w-full h-full" preserveAspectRatio="none">
+          <path
+            d="M0,100 Q300,20 600,100 T1200,100"
+            fill="none"
+            stroke="url(#services-gradient-1)"
+            strokeWidth="1.5"
+          />
+          <path
+            d="M0,120 Q300,40 600,120 T1200,120"
+            fill="none"
+            stroke="url(#services-gradient-2)"
+            strokeWidth="1"
+          />
+          <defs>
+            <linearGradient id="services-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#6366f1" stopOpacity="0" />
+              <stop offset="50%" stopColor="#6366f1" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#06b6d4" stopOpacity="0" />
+            </linearGradient>
+            <linearGradient id="services-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0" />
+              <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.3" />
+              <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      {/* Floating Dots */}
+      <div className="absolute top-20 left-[10%] w-2 h-2 bg-primary/15 rounded-full animate-pulse" />
+      <div className="absolute top-40 right-[15%] w-1.5 h-1.5 bg-cyan-500/15 rounded-full animate-pulse delay-500" />
+      <div className="absolute bottom-32 left-[20%] w-1 h-1 bg-violet-500/15 rounded-full animate-pulse delay-300" />
+
       <Container size="wide" className="relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">

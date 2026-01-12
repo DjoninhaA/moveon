@@ -10,6 +10,47 @@ export function CTA() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[150px]" />
       </div>
 
+      {/* Decorative Flowing Lines */}
+      <div className="absolute left-0 top-0 bottom-0 w-40 pointer-events-none opacity-20">
+        <svg viewBox="0 0 150 600" className="h-full w-full" preserveAspectRatio="none">
+          <path
+            d="M-20,0 Q100,150 50,300 T-20,600"
+            fill="none"
+            stroke="url(#cta-gradient-left)"
+            strokeWidth="1.5"
+          />
+          <defs>
+            <linearGradient id="cta-gradient-left" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#6366f1" stopOpacity="0" />
+              <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      <div className="absolute right-0 top-0 bottom-0 w-40 pointer-events-none opacity-20">
+        <svg viewBox="0 0 150 600" className="h-full w-full" preserveAspectRatio="none">
+          <path
+            d="M170,0 Q50,150 100,300 T170,600"
+            fill="none"
+            stroke="url(#cta-gradient-right)"
+            strokeWidth="1.5"
+          />
+          <defs>
+            <linearGradient id="cta-gradient-right" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stopColor="#8b5cf6" stopOpacity="0" />
+              <stop offset="50%" stopColor="#6366f1" stopOpacity="0.5" />
+              <stop offset="100%" stopColor="#06b6d4" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      {/* Floating Dots */}
+      <div className="absolute top-16 left-[15%] w-2 h-2 bg-primary/15 rounded-full animate-pulse" />
+      <div className="absolute bottom-20 right-[10%] w-1.5 h-1.5 bg-cyan-500/15 rounded-full animate-pulse delay-300" />
+
       <Container size="wide" className="relative z-10">
         <div className="relative bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-8 md:p-16 overflow-hidden shadow-2xl">
           {/* Decorative elements */}

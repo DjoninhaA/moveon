@@ -120,8 +120,35 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section id="beneficios" className="py-20 md:py-32 bg-white relative">
-      <Container size="wide">
+    <section id="beneficios" className="py-20 md:py-32 bg-white relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2" />
+      <div className="absolute bottom-0 left-0 w-72 h-72 bg-cyan-500/5 rounded-full blur-[80px] -translate-x-1/2 translate-y-1/2" />
+      
+      {/* Decorative Curve */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none opacity-20">
+        <svg viewBox="0 0 1200 150" className="w-full h-full" preserveAspectRatio="none">
+          <path
+            d="M0,50 Q400,150 800,50 T1600,50"
+            fill="none"
+            stroke="url(#benefits-gradient)"
+            strokeWidth="1.5"
+          />
+          <defs>
+            <linearGradient id="benefits-gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stopColor="#06b6d4" stopOpacity="0" />
+              <stop offset="50%" stopColor="#6366f1" stopOpacity="0.6" />
+              <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+
+      {/* Floating Dots */}
+      <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-primary/10 rounded-full animate-pulse" />
+      <div className="absolute bottom-1/3 left-1/5 w-1.5 h-1.5 bg-cyan-500/10 rounded-full animate-pulse delay-700" />
+
+      <Container size="wide" className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left - Content */}
           <div>
