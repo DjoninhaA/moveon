@@ -16,11 +16,10 @@ export function Footer() {
               <Image
                 src="/images/logo.png"
                 alt={siteConfig.name}
-                width={60}
-                height={60}
+                width={150}
+                height={10}
                 className="object-contain"
               />
-              <span className="text-xl font-bold">{siteConfig.name}</span>
             </Link>
             <p className="text-gray-600 mb-6 leading-relaxed">
               {siteConfig.description}

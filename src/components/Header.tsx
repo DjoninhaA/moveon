@@ -34,13 +34,10 @@ export function Header() {
             <Image
               src="/images/logo.png"
               alt={siteConfig.name}
-              width={80}
-              height={80}
+              width={200}
+              height={100}
               className="object-contain"
             />
-            <span className="text-xl font-bold text-gray-900">
-              {siteConfig.name}
-            </span>
           </Link>
 
           {/* Desktop Navigation */}
