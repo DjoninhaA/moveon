@@ -14,7 +14,7 @@ export function Hero() {
       </div>
 
       {/* Decorative Flowing Lines - Left Side */}
-      <div className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 pointer-events-none opacity-30">
+      <div className="absolute left-0 top-0 h-full w-32 md:w-48 lg:w-64 pointer-events-none opacity-50">
         <svg viewBox="0 0 200 800" className="h-full w-full" preserveAspectRatio="none">
           <path
             d="M-50,0 Q100,200 50,400 T-50,800"
@@ -57,7 +57,7 @@ export function Hero() {
       </div>
 
       {/* Decorative Flowing Lines - Right Side */}
-      <div className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 pointer-events-none opacity-30">
+      <div className="absolute right-0 top-0 h-full w-32 md:w-48 lg:w-64 pointer-events-none opacity-50">
         <svg viewBox="0 0 200 800" className="h-full w-full" preserveAspectRatio="none">
           <path
             d="M250,0 Q100,200 150,400 T250,800"
@@ -100,11 +100,11 @@ export function Hero() {
       </div>
 
       {/* Floating Dots */}
-      <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/20 rounded-full animate-pulse" />
-      <div className="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-cyan-500/20 rounded-full animate-pulse delay-300" />
-      <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-violet-500/20 rounded-full animate-pulse delay-500" />
-      <div className="absolute top-1/2 right-1/4 w-2.5 h-2.5 bg-primary/15 rounded-full animate-pulse delay-700" />
-      <div className="absolute bottom-1/3 right-1/5 w-1.5 h-1.5 bg-cyan-400/20 rounded-full animate-pulse delay-1000" />
+      <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-primary/40 rounded-full animate-pulse" />
+      <div className="absolute top-1/3 right-1/3 w-1.5 h-1.5 bg-cyan-500/40 rounded-full animate-pulse delay-300" />
+      <div className="absolute bottom-1/4 left-1/3 w-1 h-1 bg-violet-500/40 rounded-full animate-pulse delay-500" />
+      <div className="absolute top-1/2 right-1/4 w-2.5 h-2.5 bg-primary/30 rounded-full animate-pulse delay-700" />
+      <div className="absolute bottom-1/3 right-1/5 w-1.5 h-1.5 bg-cyan-400/40 rounded-full animate-pulse delay-1000" />
 
       <Container size="wide" className="relative z-10 pt-32 pb-20">
         <div className="max-w-4xl mx-auto text-center">

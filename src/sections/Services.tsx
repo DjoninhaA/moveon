@@ -59,7 +59,7 @@ export function Services() {
       </div>
 
       {/* Decorative Curves - Top */}
-      <div className="absolute top-0 left-0 right-0 h-40 pointer-events-none opacity-20">
+      <div className="absolute top-0 left-0 right-0 h-40 pointer-events-none opacity-40">
         <svg viewBox="0 0 1200 200" className="w-full h-full" preserveAspectRatio="none">
           <path
             d="M0,100 Q300,20 600,100 T1200,100"
@@ -89,9 +89,9 @@ export function Services() {
       </div>
 
       {/* Floating Dots */}
-      <div className="absolute top-20 left-[10%] w-2 h-2 bg-primary/15 rounded-full animate-pulse" />
-      <div className="absolute top-40 right-[15%] w-1.5 h-1.5 bg-cyan-500/15 rounded-full animate-pulse delay-500" />
-      <div className="absolute bottom-32 left-[20%] w-1 h-1 bg-violet-500/15 rounded-full animate-pulse delay-300" />
+      <div className="absolute top-20 left-[10%] w-2 h-2 bg-primary/30 rounded-full animate-pulse" />
+      <div className="absolute top-40 right-[15%] w-1.5 h-1.5 bg-cyan-500/30 rounded-full animate-pulse delay-500" />
+      <div className="absolute bottom-32 left-[20%] w-1 h-1 bg-violet-500/30 rounded-full animate-pulse delay-300" />
 
       <Container size="wide" className="relative z-10">
         {/* Section Header */}

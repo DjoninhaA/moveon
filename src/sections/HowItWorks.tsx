@@ -50,7 +50,7 @@ export function HowItWorks() {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
       
       {/* Decorative Curves */}
-      <div className="absolute top-0 left-0 right-0 h-40 pointer-events-none opacity-15">
+      <div className="absolute top-0 left-0 right-0 h-40 pointer-events-none opacity-30">
         <svg viewBox="0 0 1200 200" className="w-full h-full" preserveAspectRatio="none">
           <path
             d="M0,150 Q300,50 600,100 T1200,80"
@@ -80,9 +80,9 @@ export function HowItWorks() {
       </div>
 
       {/* Floating Dots */}
-      <div className="absolute top-24 right-[20%] w-2 h-2 bg-primary/10 rounded-full animate-pulse" />
-      <div className="absolute bottom-32 left-[15%] w-1.5 h-1.5 bg-cyan-500/10 rounded-full animate-pulse delay-500" />
-      <div className="absolute top-1/2 left-[8%] w-1 h-1 bg-violet-500/10 rounded-full animate-pulse delay-700" />
+      <div className="absolute top-24 right-[20%] w-2 h-2 bg-primary/25 rounded-full animate-pulse" />
+      <div className="absolute bottom-32 left-[15%] w-1.5 h-1.5 bg-cyan-500/25 rounded-full animate-pulse delay-500" />
+      <div className="absolute top-1/2 left-[8%] w-1 h-1 bg-violet-500/25 rounded-full animate-pulse delay-700" />
 
       <Container size="wide" className="relative z-10">
         {/* Section Header */}

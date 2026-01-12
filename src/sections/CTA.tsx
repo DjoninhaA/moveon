@@ -11,7 +11,7 @@ export function CTA() {
       </div>
 
       {/* Decorative Flowing Lines */}
-      <div className="absolute left-0 top-0 bottom-0 w-40 pointer-events-none opacity-20">
+      <div className="absolute left-0 top-0 bottom-0 w-40 pointer-events-none opacity-40">
         <svg viewBox="0 0 150 600" className="h-full w-full" preserveAspectRatio="none">
           <path
             d="M-20,0 Q100,150 50,300 T-20,600"
@@ -29,7 +29,7 @@ export function CTA() {
         </svg>
       </div>
 
-      <div className="absolute right-0 top-0 bottom-0 w-40 pointer-events-none opacity-20">
+      <div className="absolute right-0 top-0 bottom-0 w-40 pointer-events-none opacity-40">
         <svg viewBox="0 0 150 600" className="h-full w-full" preserveAspectRatio="none">
           <path
             d="M170,0 Q50,150 100,300 T170,600"
@@ -48,8 +48,8 @@ export function CTA() {
       </div>
 
       {/* Floating Dots */}
-      <div className="absolute top-16 left-[15%] w-2 h-2 bg-primary/15 rounded-full animate-pulse" />
-      <div className="absolute bottom-20 right-[10%] w-1.5 h-1.5 bg-cyan-500/15 rounded-full animate-pulse delay-300" />
+      <div className="absolute top-16 left-[15%] w-2 h-2 bg-primary/30 rounded-full animate-pulse" />
+      <div className="absolute bottom-20 right-[10%] w-1.5 h-1.5 bg-cyan-500/30 rounded-full animate-pulse delay-300" />
 
       <Container size="wide" className="relative z-10">
         <div className="relative bg-gradient-to-br from-primary to-primary-dark rounded-3xl p-8 md:p-16 overflow-hidden shadow-2xl">
