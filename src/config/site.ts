@@ -26,9 +26,9 @@ export const siteConfig = {
 
   // Redes sociais
   social: {
-    linkedin: "https://linkedin.com/company/moveon",
-    github: "https://github.com/moveon",
-    instagram: "https://instagram.com/moveon",
+    linkedin: "https://linkedin.com/company/",
+    github: "https://github.com/",
+    instagram: "https://instagram.com/",
   },
 
   // CTAs
