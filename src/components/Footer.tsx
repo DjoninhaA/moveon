@@ -20,11 +20,12 @@ export function Footer() {
                 height={10}
                 className="object-contain"
               />
+
             </Link>
             <p className="text-gray-600 mb-6 leading-relaxed">
               {siteConfig.description}
             </p>
-            {/* Social Links */}
+            {/* Social Links - Comentado temporariamente
             <div className="flex gap-3">
               <a
                 href={siteConfig.social.linkedin}
@@ -72,6 +73,7 @@ export function Footer() {
                 </svg>
               </a>
             </div>
+            */}
           </div>
 
           {/* Services */}
