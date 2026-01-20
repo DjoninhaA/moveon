@@ -18,7 +18,7 @@ export const siteConfig = {
 
   // Informações de contato
   contact: {
-    email: "contato@moveon.com.br",
+    email: "nutrivita.app@gmail.com",
     phone: "(45) 99147-3601",
     whatsapp: "554591473601", // Número sem formatação para link
     address: "Toledo, Pr",
