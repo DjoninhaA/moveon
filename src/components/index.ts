@@ -4,3 +4,4 @@ export { SectionTitle } from "./SectionTitle";
 export { Card, CardIcon, CardTitle, CardDescription } from "./Card";
 export { Header } from "./Header";
 export { Footer } from "./Footer";
+export { ContactForm } from "./ContactForm";

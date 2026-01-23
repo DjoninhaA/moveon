@@ -1,4 +1,4 @@
-import { Container } from "@/components";
+import { Container, ContactForm } from "@/components";
 import { siteConfig } from "@/config/site";
 
 export function CTA() {
@@ -112,6 +112,11 @@ export function CTA() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Contact Form Section */}
+        <div className="mt-16">
+          <ContactForm />
         </div>
       </Container>
     </section>
