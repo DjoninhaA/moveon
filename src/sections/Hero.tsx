@@ -67,7 +67,7 @@ export function Hero() {
           <div className="absolute left-0 right-0 top-8 rounded-t-2xl overflow-hidden shadow-xl shadow-gray-300/40 border border-gray-200/60 z-0">
             <div className="relative">
               <Image
-                src="/images/app-preview-locafacil.png"
+                src="/images/locafacil/app-preview-locafacil.png"
                 alt="Loca Fácil"
                 width={1200}
                 height={700}
@@ -80,7 +80,7 @@ export function Hero() {
           <div className="absolute left-44 md:left-64 right-0 top-0 rounded-t-2xl overflow-hidden shadow-2xl shadow-gray-400/30 border border-gray-200/60 z-10">
             <div className="relative">
               <Image
-                src="/images/app-preview.png"
+                src="/images/healthy/app-preview.png"
                 alt="Healthy App"
                 width={1200}
                 height={700}
