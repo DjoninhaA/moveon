@@ -20,10 +20,10 @@ export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 pt-4 px-4">
       <div
-        className={`max-w-6xl mx-auto transition-all duration-300 ${
+        className={`max-w-6xl mx-auto transition-all duration-300 bg-white ${
           isScrolled
-            ? "bg-white/95 backdrop-blur-lg shadow-lg shadow-gray-200/60"
-            : "bg-white/90 backdrop-blur-md shadow-md shadow-gray-100/50"
+            ? "shadow-lg shadow-gray-200/60"
+            : "shadow-md shadow-gray-100/50"
         } rounded-2xl border border-gray-100`}
       >
         <nav className="flex items-center justify-between h-16 px-6">
