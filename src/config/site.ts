@@ -10,6 +10,7 @@ export const siteConfig = {
 
   // Links de navegação
   navigation: [
+    { name: "Produtos", href: "#produtos" },
     { name: "Serviços", href: "#servicos" },
     { name: "Benefícios", href: "#beneficios" },
     { name: "Como Funciona", href: "#como-funciona" },

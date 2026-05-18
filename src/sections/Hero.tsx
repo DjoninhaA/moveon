@@ -40,7 +40,7 @@ export function Hero() {
             href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-primary font-semibold text-sm hover:bg-white/90 transition-all shadow-lg"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-primary font-semibold text-sm hover:scale-105 hover:shadow-xl transition-all duration-200 shadow-lg cursor-pointer"
           >
             {siteConfig.cta.primary}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
