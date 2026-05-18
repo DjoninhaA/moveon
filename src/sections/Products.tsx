@@ -103,7 +103,7 @@ export function Products() {
               return (
                 <button
                   key={index}
-                  onClick={() => setActive(index)}
+                  onClick={() => { setActive(index); setSlide(0); }}
                   className={`group relative rounded-2xl p-5 text-left transition-all duration-300 cursor-pointer border focus:outline-none
                     ${isActive
                       ? `bg-linear-to-br ${product.gradient} border-transparent shadow-2xl`
