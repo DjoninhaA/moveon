@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       className="relative min-h-screen flex flex-col overflow-hidden"
-      style={{ background: "#c4b5fd" }}
+      style={{ background: "#4F46E5" }}
     >
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center justify-center flex-1 pt-36 pb-10 px-4 text-center">
