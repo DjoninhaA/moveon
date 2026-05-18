@@ -10,6 +10,9 @@ const steps = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
       </svg>
     ),
+    color: "from-cyan-500 to-teal-500",
+    bgLight: "bg-cyan-50",
+    borderColor: "border-cyan-200",
   },
   {
     number: "02",
@@ -20,6 +23,9 @@ const steps = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
       </svg>
     ),
+    color: "from-primary to-violet-500",
+    bgLight: "bg-indigo-50",
+    borderColor: "border-indigo-200",
   },
   {
     number: "03",
@@ -30,6 +36,9 @@ const steps = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
       </svg>
     ),
+    color: "from-violet-500 to-purple-500",
+    bgLight: "bg-violet-50",
+    borderColor: "border-violet-200",
   },
   {
     number: "04",
@@ -40,107 +49,73 @@ const steps = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
       </svg>
     ),
+    color: "from-emerald-500 to-green-500",
+    bgLight: "bg-emerald-50",
+    borderColor: "border-emerald-200",
   },
 ];
 
 export function HowItWorks() {
   return (
-    <section id="como-funciona" className="py-20 md:py-32 bg-gray-50 relative overflow-hidden">
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(99,102,241,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(99,102,241,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
-      
-      {/* Decorative Curves */}
-      <div className="absolute top-0 left-0 right-0 h-40 pointer-events-none opacity-30">
-        <svg viewBox="0 0 1200 200" className="w-full h-full" preserveAspectRatio="none">
-          <path
-            d="M0,150 Q300,50 600,100 T1200,80"
-            fill="none"
-            stroke="url(#how-gradient-1)"
-            strokeWidth="1.5"
-          />
-          <path
-            d="M0,170 Q400,70 800,120 T1600,100"
-            fill="none"
-            stroke="url(#how-gradient-2)"
-            strokeWidth="1"
-          />
-          <defs>
-            <linearGradient id="how-gradient-1" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#06b6d4" stopOpacity="0" />
-              <stop offset="50%" stopColor="#8b5cf6" stopOpacity="0.5" />
-              <stop offset="100%" stopColor="#6366f1" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient id="how-gradient-2" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#6366f1" stopOpacity="0" />
-              <stop offset="50%" stopColor="#06b6d4" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#8b5cf6" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-
-      {/* Floating Dots */}
-      <div className="absolute top-24 right-[20%] w-2 h-2 bg-primary/25 rounded-full animate-pulse" />
-      <div className="absolute bottom-32 left-[15%] w-1.5 h-1.5 bg-cyan-500/25 rounded-full animate-pulse delay-500" />
-      <div className="absolute top-1/2 left-[8%] w-1 h-1 bg-violet-500/25 rounded-full animate-pulse delay-700" />
+    <section id="como-funciona" className="py-20 md:py-28 bg-white relative overflow-hidden">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(16,185,129,0.04)_0%,transparent_60%)] pointer-events-none" />
 
       <Container size="wide" className="relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 bg-primary/5 border border-primary/10 rounded-full">
-            <span className="w-2 h-2 bg-primary rounded-full" />
-            <span className="text-sm text-primary font-medium">Nossa Metodologia</span>
+        <div className="text-center mb-14">
+          <div className="flex flex-col items-center gap-2 mb-5">
+            <span className="text-xs font-bold uppercase tracking-widest text-primary">Nossa Metodologia</span>
+            <div className="w-10 h-0.5 bg-linear-to-r from-primary to-cyan-500 rounded-full" />
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Como{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-cyan-500">
               funciona
             </span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
-            Processo estruturado que garante entregas de qualidade e dentro do prazo
+          <p className="text-gray-500 max-w-xl mx-auto text-base md:text-lg">
+            Processo estruturado que garante entregas de qualidade dentro do prazo
           </p>
         </div>
 
         {/* Steps */}
-        <div className="relative">
-          {/* Connection Line - Desktop */}
-          <div className="hidden lg:block absolute top-[60px] left-[10%] right-[10%] h-[2px]">
-            <div className="w-full h-full bg-gradient-to-r from-primary via-cyan-500 to-emerald-500 rounded-full" />
-          </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
+          {/* Connector line on desktop */}
+          <div className="hidden lg:block absolute top-13 left-[12.5%] right-[12.5%] h-px bg-linear-to-r from-cyan-300 via-primary to-emerald-400 opacity-40 z-0" />
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {steps.map((step, index) => (
-              <div key={index} className="relative">
-                {/* Card */}
-                <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-xl hover:border-primary/20 transition-all duration-300 group">
-                  {/* Number Badge */}
-                  <div className="relative z-10 w-[120px] h-[120px] mx-auto mb-6 rounded-full bg-gradient-to-br from-primary to-cyan-500 flex items-center justify-center shadow-lg shadow-primary/20 group-hover:scale-105 transition-transform">
-                    <div className="w-[100px] h-[100px] rounded-full bg-white flex flex-col items-center justify-center">
-                      <span className="text-primary">{step.icon}</span>
-                      <span className="text-2xl font-bold text-foreground mt-1">{step.number}</span>
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-foreground text-center mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-500 text-center text-sm">
-                    {step.description}
-                  </p>
+          {steps.map((step, index) => (
+            <div key={index} className="relative z-10">
+              <div className={`${step.bgLight} border ${step.borderColor} rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group hover:-translate-y-1`}>
+                {/* Icon circle */}
+                <div className={`w-15 h-15 mx-auto mb-5 rounded-full bg-linear-to-br ${step.color} flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform`}>
+                  {step.icon}
                 </div>
 
-                {/* Arrow - Mobile/Tablet */}
-                {index < steps.length - 1 && (
-                  <div className="lg:hidden flex justify-center my-4">
-                    <svg className="w-6 h-6 text-primary rotate-90 md:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </div>
-                )}
+                {/* Step number badge */}
+                <div className="text-center mb-3">
+                  <span className={`inline-block text-xs font-bold px-2.5 py-1 rounded-full bg-linear-to-r ${step.color} text-white`}>
+                    {step.number}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-bold text-gray-900 text-center mb-2">
+                  {step.title}
+                </h3>
+                <p className="text-gray-500 text-center text-sm leading-relaxed">
+                  {step.description}
+                </p>
               </div>
-            ))}
-          </div>
+
+              {/* Arrow on mobile/tablet between steps */}
+              {index < steps.length - 1 && (
+                <div className="lg:hidden flex justify-center my-3">
+                  <svg className="w-5 h-5 text-gray-300 rotate-90 md:rotate-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </div>
+              )}
+            </div>
+          ))}
         </div>
       </Container>
     </section>
