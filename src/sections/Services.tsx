@@ -50,7 +50,7 @@ export function Services() {
   const [active, setActive] = useState(1);
 
   return (
-    <section id="servicos" className="py-20 md:py-28 bg-white relative overflow-hidden">
+    <section id="servicos" className="py-20 md:py-28 relative overflow-hidden bg-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(99,102,241,0.04)_0%,transparent_60%)]" />
 
       <Container size="wide" className="relative z-10">

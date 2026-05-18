@@ -11,17 +11,17 @@ export function Hero() {
       <div className="relative z-10 flex flex-col items-center justify-center flex-1 pt-36 pb-10 px-4 text-center">
         {/* Badge */}
         <div className="flex flex-col items-center gap-2 mb-8">
-          <span className="text-xs font-bold uppercase tracking-widest text-primary">Soluções em Tecnologia</span>
-          <div className="w-10 h-0.5 bg-linear-to-r from-primary to-cyan-500 rounded-full" />
+          <span className="text-xs font-bold uppercase tracking-widest text-white">Soluções em Tecnologia</span>
+          <div className="w-10 h-0.5 bg-white/40 rounded-full" />
         </div>
 
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 leading-[1.15] mb-6 max-w-3xl">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.15] mb-6 max-w-3xl">
           Nossa Solução em Software para Simplificar
           <br />
           Suas{" "}
           <span
-            className="text-gray-900"
+            className="text-white"
             style={{ fontStyle: "italic", fontFamily: "Georgia, 'Times New Roman', serif" }}
           >
             Operações
@@ -29,7 +29,7 @@ export function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-base md:text-lg text-gray-500 mb-10 max-w-xl mx-auto leading-relaxed">
+        <p className="text-base md:text-lg text-white/70 mb-10 max-w-xl mx-auto leading-relaxed">
           Desenvolvemos software sob medida e soluções de automação para otimizar
           processos e acelerar o crescimento da sua empresa.
         </p>
@@ -40,7 +40,7 @@ export function Hero() {
             href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-white font-semibold text-sm hover:bg-primary-dark transition-all shadow-lg shadow-primary/25 hover:shadow-primary/40"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-primary font-semibold text-sm hover:bg-white/90 transition-all shadow-lg"
           >
             {siteConfig.cta.primary}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -49,7 +49,7 @@ export function Hero() {
           </a>
           <a
             href="#servicos"
-            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-gray-300 text-gray-700 font-semibold text-sm hover:border-primary hover:text-primary transition-all bg-white/60 backdrop-blur-sm"
+            className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border border-white/40 text-white font-semibold text-sm hover:bg-white/10 transition-all"
           >
             {siteConfig.cta.secondary}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -73,7 +73,6 @@ export function Hero() {
                 height={700}
                 className="w-full object-cover object-top"
               />
-              <div className="absolute inset-0 bg-white/20 pointer-events-none" />
             </div>
           </div>
 
@@ -88,21 +87,9 @@ export function Hero() {
                 className="w-full object-cover object-top"
                 priority
               />
-              {/* Bottom fade */}
-              <div
-                className="absolute bottom-0 left-0 right-0 h-32 pointer-events-none"
-                style={{ background: "linear-gradient(to bottom, transparent 0%, rgba(245,243,255,0.8) 60%, rgba(237,233,254,1) 100%)" }}
-              />
             </div>
           </div>
 
-          {/* Global left/right vignette */}
-          <div className="absolute inset-y-0 left-0 w-10 pointer-events-none z-20"
-            style={{ background: "linear-gradient(to right, rgba(248,247,255,0.7), transparent)" }}
-          />
-          <div className="absolute inset-y-0 right-0 w-10 pointer-events-none z-20"
-            style={{ background: "linear-gradient(to left, rgba(237,233,254,0.7), transparent)" }}
-          />
         </div>
       </div>
     </section>

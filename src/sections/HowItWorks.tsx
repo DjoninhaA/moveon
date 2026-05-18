@@ -54,7 +54,7 @@ export function HowItWorks() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="como-funciona" className="py-20 md:py-28 bg-white relative overflow-hidden">
+    <section id="como-funciona" className="py-20 md:py-28 relative overflow-hidden bg-white">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_70%,rgba(16,185,129,0.04)_0%,transparent_60%)] pointer-events-none" />
 
       <Container size="wide" className="relative z-10">

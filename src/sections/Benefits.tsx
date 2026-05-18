@@ -63,7 +63,7 @@ export function Benefits() {
       id="beneficios"
       className="py-20 md:py-28 relative overflow-hidden"
       style={{
-        background: "linear-gradient(160deg, #f5f3ff 0%, #ede9fe 30%, #ffffff 60%, #f8f7ff 100%)"
+        background: "#4F46E5"
       }}
     >
       {/* Decorative orbs */}
@@ -75,14 +75,14 @@ export function Benefits() {
           {/* Left - Content */}
           <div>
             <div className="flex flex-col items-start gap-2 mb-5">
-              <span className="text-xs font-bold uppercase tracking-widest text-primary">Por que nos escolher</span>
-              <div className="w-10 h-0.5 bg-linear-to-r from-primary to-cyan-500 rounded-full" />
+              <span className="text-xs font-bold uppercase tracking-widest text-white">Por que nos escolher</span>
+              <div className="w-10 h-0.5 bg-linear-to-r from-white/60 to-cyan-300 rounded-full" />
             </div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
               Benefícios que{" "}
-              <span className="text-gray-900">fazem a diferença</span>
+              <span className="text-white">fazem a diferença</span>
             </h2>
-            <p className="text-gray-500 text-lg max-w-md leading-relaxed mb-8">
+            <p className="text-white/90 text-lg max-w-md leading-relaxed mb-8">
               Descubra como podemos transformar a operação da sua empresa com
               soluções tecnológicas de ponta.
             </p>
@@ -95,8 +95,8 @@ export function Benefits() {
                 { value: "5 anos", label: "De experiência" },
               ].map((stat, i) => (
                 <div key={i}>
-                  <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                  <div className="text-sm text-gray-500">{stat.label}</div>
+                  <div className="text-2xl font-bold text-white">{stat.value}</div>
+                  <div className="text-sm text-white/90">{stat.label}</div>
                 </div>
               ))}
             </div>
@@ -107,7 +107,7 @@ export function Benefits() {
             {benefits.map((benefit, index) => (
               <div
                 key={index}
-                className="group p-5 rounded-2xl bg-white/80 backdrop-blur-sm border border-white shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300 cursor-pointer"
+                className="group p-5 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20 transition-all duration-300 cursor-pointer"
               >
                 <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white mb-3.5 transition-colors duration-300">
                   {benefit.icon}

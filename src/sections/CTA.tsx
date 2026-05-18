@@ -7,7 +7,7 @@ export function CTA() {
       id="contato"
       className="py-20 md:py-28 relative overflow-hidden"
       style={{
-        background: "linear-gradient(160deg, #f8f7ff 0%, #f5f3ff 20%, #ffffff 50%, #ede9fe 80%, #ddd6fe 100%)"
+        background: "#4F46E5"
       }}
     >
       {/* Decorative orbs */}
@@ -28,7 +28,7 @@ export function CTA() {
 
       <Container size="wide" className="relative z-10">
         {/* CTA Card */}
-        <div className="relative bg-linear-to-br from-primary to-primary-dark rounded-3xl p-8 md:p-14 overflow-hidden shadow-2xl shadow-primary/20 mb-16">
+        <div className="relative bg-linear-to-br from-primary to-primary-dark rounded-3xl p-8 md:p-14 overflow-hidden shadow-2xl shadow-primary/20 mb-16 border border-white/20">
           <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-56 h-56 bg-cyan-400/15 rounded-full blur-2xl" />
 
@@ -41,7 +41,7 @@ export function CTA() {
 
           <div className="relative z-10 max-w-2xl mx-auto text-center">
             <div className="flex flex-col items-center gap-2 mb-6">
-              <span className="text-xs font-bold uppercase tracking-widest text-white/80">Pronto para começar?</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-white">Pronto para começar?</span>
               <div className="w-10 h-0.5 bg-linear-to-r from-white/60 to-cyan-300 rounded-full" />
             </div>
 
