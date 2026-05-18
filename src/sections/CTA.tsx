@@ -7,12 +7,12 @@ export function CTA() {
       id="contato"
       className="py-20 md:py-28 relative overflow-hidden"
       style={{
-        background: "linear-gradient(160deg, #ecfdf5 0%, #d1fae5 20%, #ffffff 50%, #ede9fe 80%, #ddd6fe 100%)"
+        background: "linear-gradient(160deg, #f8f7ff 0%, #f5f3ff 20%, #ffffff 50%, #ede9fe 80%, #ddd6fe 100%)"
       }}
     >
       {/* Decorative orbs */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 bg-primary/5 rounded-full blur-[150px] pointer-events-none" />
-      <div className="absolute top-0 left-0 w-64 h-64 bg-emerald-400/8 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute top-0 left-0 w-64 h-64 bg-primary/8 rounded-full blur-[100px] pointer-events-none" />
 
       {/* Sparkle - right */}
       <div className="absolute top-20 right-16 pointer-events-none opacity-50">
@@ -48,7 +48,7 @@ export function CTA() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
               Transforme sua empresa com{" "}
               <span
-                className="text-cyan-300"
+                className="text-white/90"
                 style={{ fontStyle: "italic", fontFamily: "Georgia, 'Times New Roman', serif" }}
               >
                 tecnologia inteligente

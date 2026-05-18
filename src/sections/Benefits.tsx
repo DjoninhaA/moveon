@@ -63,12 +63,12 @@ export function Benefits() {
       id="beneficios"
       className="py-20 md:py-28 relative overflow-hidden"
       style={{
-        background: "linear-gradient(160deg, #f5f3ff 0%, #ede9fe 30%, #ffffff 60%, #ecfdf5 100%)"
+        background: "linear-gradient(160deg, #f5f3ff 0%, #ede9fe 30%, #ffffff 60%, #f8f7ff 100%)"
       }}
     >
       {/* Decorative orbs */}
       <div className="absolute top-0 right-0 w-80 h-80 bg-primary/8 rounded-full blur-[100px] -translate-y-1/3 translate-x-1/3 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-emerald-400/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/8 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3 pointer-events-none" />
 
       <Container size="wide" className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-14 items-center">
@@ -80,9 +80,7 @@ export function Benefits() {
             </div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               Benefícios que{" "}
-              <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-cyan-500">
-                fazem a diferença
-              </span>
+              <span className="text-gray-900">fazem a diferença</span>
             </h2>
             <p className="text-gray-500 text-lg max-w-md leading-relaxed mb-8">
               Descubra como podemos transformar a operação da sua empresa com

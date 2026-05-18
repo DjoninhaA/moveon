@@ -62,9 +62,7 @@ export function Services() {
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Soluções completas em{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-primary to-cyan-500">
-              tecnologia
-            </span>
+            <span className="text-gray-900">tecnologia</span>
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto text-base md:text-lg">
             Um conjunto completo de serviços para transformar e otimizar sua operação
