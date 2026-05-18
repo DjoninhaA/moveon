@@ -87,8 +87,7 @@ export function Products() {
             <div className="w-10 h-0.5 bg-linear-to-r from-primary to-cyan-500 rounded-full" />
           </div>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Soluções prontas para o seu{" "}
-            <span className="text-primary">negócio</span>
+            Soluções prontas para o seu negócio
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto text-base md:text-lg">
             Produtos desenvolvidos para atender segmentos específicos com excelência
