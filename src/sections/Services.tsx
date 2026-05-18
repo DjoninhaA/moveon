@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { Container } from "@/components";
 
 const services = [
@@ -10,8 +13,6 @@ const services = [
     title: "Software Sob Medida",
     description: "Sistemas personalizados que se adaptam às necessidades específicas do seu negócio.",
     gradient: "from-cyan-500 to-teal-500",
-    bg: "bg-cyan-50",
-    border: "border-cyan-100",
   },
   {
     icon: (
@@ -22,8 +23,6 @@ const services = [
     title: "Automação de Processos",
     description: "Automatize tarefas repetitivas e aumente a eficiência operacional da empresa.",
     gradient: "from-primary to-violet-500",
-    bg: "bg-indigo-50",
-    border: "border-indigo-100",
   },
   {
     icon: (
@@ -34,8 +33,6 @@ const services = [
     title: "Integrações",
     description: "Conecte sistemas e plataformas em um ecossistema digital totalmente integrado.",
     gradient: "from-emerald-500 to-green-500",
-    bg: "bg-emerald-50",
-    border: "border-emerald-100",
   },
   {
     icon: (
@@ -46,15 +43,14 @@ const services = [
     title: "Analytics & BI",
     description: "Dashboards e relatórios inteligentes para decisões baseadas em dados reais.",
     gradient: "from-violet-500 to-purple-500",
-    bg: "bg-violet-50",
-    border: "border-violet-100",
   },
 ];
 
 export function Services() {
+  const [active, setActive] = useState(1);
+
   return (
     <section id="servicos" className="py-20 md:py-28 bg-white relative overflow-hidden">
-      {/* Subtle background texture */}
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_50%,rgba(99,102,241,0.04)_0%,transparent_60%)]" />
 
       <Container size="wide" className="relative z-10">
@@ -75,33 +71,49 @@ export function Services() {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Services Cards */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className={`group relative ${service.bg} border ${service.border} rounded-2xl p-6 hover:shadow-xl hover:shadow-primary/8 transition-all duration-300 hover:-translate-y-1.5`}
-            >
-              {/* Icon */}
-              <div className={`w-12 h-12 rounded-xl bg-linear-to-br ${service.gradient} flex items-center justify-center text-white mb-5 shadow-md`}>
-                {service.icon}
-              </div>
+          {services.map((service, index) => {
+            const isActive = active === index;
+            return (
+              <button
+                key={index}
+                onClick={() => setActive(index)}
+                className={`group relative rounded-2xl p-8 text-left transition-all duration-300 cursor-pointer border focus:outline-none
+                  ${isActive
+                    ? `bg-linear-to-br ${service.gradient} border-transparent shadow-2xl -translate-y-2`
+                    : "bg-white border-gray-100 shadow-sm hover:-translate-y-1 hover:shadow-md hover:border-primary/20"
+                  }`}
+              >
+                {/* Icon circle */}
+                <div className={`w-16 h-16 mx-auto mb-6 rounded-full flex items-center justify-center transition-all duration-300
+                  ${isActive
+                    ? "bg-white/20 text-white"
+                    : "bg-gray-50 text-primary group-hover:bg-primary/10"
+                  }`}
+                >
+                  {service.icon}
+                </div>
 
-              <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary transition-colors">
-                {service.title}
-              </h3>
-              <p className="text-gray-500 text-sm leading-relaxed mb-4">
-                {service.description}
-              </p>
+                <h3 className={`text-lg font-bold text-center mb-3 transition-colors duration-300
+                  ${isActive ? "text-white" : "text-gray-900"}`}
+                >
+                  {service.title}
+                </h3>
 
-              <div className="flex items-center gap-1.5 text-gray-400 group-hover:text-primary transition-colors">
-                <span className="text-xs font-medium">Saiba mais</span>
-                <svg className="w-3.5 h-3.5 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </svg>
-              </div>
-            </div>
-          ))}
+                <p className={`text-sm text-center leading-relaxed transition-colors duration-300
+                  ${isActive ? "text-white/80" : "text-gray-500"}`}
+                >
+                  {service.description}
+                </p>
+
+                {/* Bottom line indicator */}
+                <div className={`mt-6 mx-auto h-0.5 rounded-full transition-all duration-300
+                  ${isActive ? "w-10 bg-white/50" : "w-0 bg-primary"}`}
+                />
+              </button>
+            );
+          })}
         </div>
       </Container>
     </section>
