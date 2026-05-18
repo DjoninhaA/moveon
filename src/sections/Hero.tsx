@@ -29,7 +29,7 @@ export function Hero() {
         </h1>
 
         {/* Subtitle */}
-        <p className="text-base md:text-lg text-white/70 mb-10 max-w-xl mx-auto leading-relaxed">
+        <p className="text-base md:text-lg text-white mb-10 max-w-xl mx-auto leading-relaxed">
           Desenvolvemos software sob medida e soluções de automação para otimizar
           processos e acelerar o crescimento da sua empresa.
         </p>

@@ -48,14 +48,14 @@ export function CTA() {
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 leading-tight">
               Transforme sua empresa com{" "}
               <span
-                className="text-white/90"
+                className="text-white"
                 style={{ fontStyle: "italic", fontFamily: "Georgia, 'Times New Roman', serif" }}
               >
                 tecnologia inteligente
               </span>
             </h2>
 
-            <p className="text-base text-white/75 mb-8 max-w-lg mx-auto leading-relaxed">
+            <p className="text-base text-white mb-8 max-w-lg mx-auto leading-relaxed">
               Entre em contato e descubra como podemos ajudar seu negócio
               a alcançar novos patamares de eficiência e crescimento.
             </p>
@@ -82,7 +82,7 @@ export function CTA() {
 
             {/* Contact Info */}
             <div className="flex flex-wrap justify-center gap-6 pt-7 border-t border-white/20">
-              <div className="flex items-center gap-2.5 text-white/75 text-sm">
+              <div className="flex items-center gap-2.5 text-white text-sm">
                 <div className="w-8 h-8 rounded-lg bg-white/15 flex items-center justify-center shrink-0">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -90,7 +90,7 @@ export function CTA() {
                 </div>
                 <span>{siteConfig.contact.email}</span>
               </div>
-              <div className="flex items-center gap-2.5 text-white/75 text-sm">
+              <div className="flex items-center gap-2.5 text-white text-sm">
                 <div className="w-8 h-8 rounded-lg bg-white/15 flex items-center justify-center shrink-0">
                   <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

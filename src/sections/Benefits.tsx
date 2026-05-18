@@ -82,7 +82,7 @@ export function Benefits() {
               Benefícios que{" "}
               <span className="text-white">fazem a diferença</span>
             </h2>
-            <p className="text-white/90 text-lg max-w-md leading-relaxed mb-8">
+            <p className="text-white text-lg max-w-md leading-relaxed mb-8">
               Descubra como podemos transformar a operação da sua empresa com
               soluções tecnológicas de ponta.
             </p>
@@ -96,7 +96,7 @@ export function Benefits() {
               ].map((stat, i) => (
                 <div key={i}>
                   <div className="text-2xl font-bold text-white">{stat.value}</div>
-                  <div className="text-sm text-white/90">{stat.label}</div>
+                  <div className="text-sm text-white">{stat.label}</div>
                 </div>
               ))}
             </div>

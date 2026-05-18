@@ -99,7 +99,7 @@ export function HowItWorks() {
                 {/* Step number badge */}
                 <div className="text-center mb-3">
                   <span className={`text-xs font-bold tracking-widest transition-colors duration-300
-                    ${isActive ? "text-white/60" : "text-gray-400"}`}
+                    ${isActive ? "text-white" : "text-gray-400"}`}
                   >
                     {step.number}
                   </span>
@@ -112,7 +112,7 @@ export function HowItWorks() {
                 </h3>
 
                 <p className={`text-sm text-center leading-relaxed transition-colors duration-300
-                  ${isActive ? "text-white/80" : "text-gray-500"}`}
+                  ${isActive ? "text-white" : "text-gray-500"}`}
                 >
                   {step.description}
                 </p>

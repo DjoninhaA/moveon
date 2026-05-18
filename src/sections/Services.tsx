@@ -100,7 +100,7 @@ export function Services() {
                 </h3>
 
                 <p className={`text-sm text-center leading-relaxed transition-colors duration-300
-                  ${isActive ? "text-white/80" : "text-gray-500"}`}
+                  ${isActive ? "text-white" : "text-gray-500"}`}
                 >
                   {service.description}
                 </p>
