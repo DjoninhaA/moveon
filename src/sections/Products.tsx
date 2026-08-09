@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { Container } from "@/components";
 
@@ -11,6 +11,7 @@ const products = [
     description:
       "Plataforma completa para clínicas e profissionais de saúde gerenciarem pacientes, agenda, consultas e finanças em um só lugar.",
     features: ["Agenda de consultas", "Prontuário eletrônico", "Controle financeiro", "Relatórios"],
+    url: "https://healthyapp.com.br/",
     images: [
       { src: "/images/healthy/app-preview.png", label: "Dashboard" },
       { src: "/images/healthy/agenda.png", label: "Agenda" },
@@ -23,45 +24,36 @@ const products = [
     name: "Loca Fácil",
     tagline: "Gestão de Locações",
     description:
-      "Sistema intuitivo para empresas de locação controlarem itens, clientes, contratos e pagamentos com total praticidade.",
-    features: ["Cadastro de itens", "Controle de clientes", "Gestão de contratos", "Pagamentos"],
+      "Sistema completo para empresas de locação gerenciarem clientes, itens, inventários, locações e catálogos, com controle financeiro integrado em pagamentos.",
+    features: ["Clientes", "Itens", "Inventários", "Locações", "Catálogos", "Pagamentos"],
+    url: "https://locafacil.moveonsistemas.com.br/",
     images: [
       { src: "/images/locafacil/app-preview-locafacil.png", label: "Dashboard" },
       { src: "/images/locafacil/locacao.png", label: "Locações" },
       { src: "/images/locafacil/pagamentos.png", label: "Pagamentos" },
+      { src: "/images/locafacil/catalogo.png", label: "Catalogos" },
     ],
   },
 ];
 
 export function Products() {
   const [active, setActive] = useState(0);
-  const [slide, setSlide] = useState(0);
+  const [mainIndex, setMainIndex] = useState(0);
+  const product = products[active];
+  const mainImage = product.images[mainIndex];
 
-  const stateRef = useRef({ active, slide });
-  stateRef.current = { active, slide };
-
-  const currentImages = products[active].images;
-  const safeSlide = slide % currentImages.length;
-
-  const next = useCallback(() => {
-    const { active: a, slide: s } = stateRef.current;
-    const images = products[a].images;
-    if (s + 1 >= images.length) {
-      setActive((prev) => (prev + 1) % products.length);
-      setSlide(0);
-    } else {
-      setSlide(s + 1);
-    }
-  }, []);
-
-  const prev = () => {
-    setSlide((s) => (s - 1 + currentImages.length) % currentImages.length);
+  const selectProduct = (index: number) => {
+    setActive(index);
+    setMainIndex(0);
   };
 
-  useEffect(() => {
-    const timer = setInterval(next, 3500);
-    return () => clearInterval(timer);
-  }, [next]);
+  const prevImage = () => {
+    setMainIndex((i) => (i - 1 + product.images.length) % product.images.length);
+  };
+
+  const nextImage = () => {
+    setMainIndex((i) => (i + 1) % product.images.length);
+  };
 
   return (
     <section id="produtos" className="min-h-screen flex flex-col justify-center py-20 md:py-28 border-t border-gray-200 bg-white">
@@ -80,106 +72,135 @@ export function Products() {
           </p>
         </div>
 
-        {/* Cards + Carousel */}
-        <div className="grid lg:grid-cols-[2fr_3fr] gap-8 items-start">
-          {/* Product list */}
-          <div className="border-t border-gray-200">
-            {products.map((product, index) => {
-              const isActive = active === index;
-              return (
-                <button
-                  key={index}
-                  onClick={() => { setActive(index); setSlide(0); }}
-                  className={`group w-full text-left border-b border-gray-200 border-l-2 pl-5 pr-4 py-6 transition-colors duration-200 cursor-pointer focus:outline-none ${
-                    isActive ? "border-l-primary bg-gray-50" : "border-l-transparent hover:bg-gray-50"
-                  }`}
-                >
-                  <span className={`font-mono text-xs tracking-widest mb-2 block transition-colors duration-200 ${
-                    isActive ? "text-primary" : "text-gray-400"
-                  }`}>
-                    {product.tagline}
-                  </span>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
-                    {product.name}
-                  </h3>
-                  <p className="text-sm leading-relaxed mb-4 text-gray-500">
-                    {product.description}
-                  </p>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1.5">
-                    {product.features.map((feature, i) => (
-                      <span key={i} className="text-xs text-gray-500 flex items-center gap-1.5">
-                        <span className="w-1 h-1 rounded-full bg-gray-400" />
-                        {feature}
-                      </span>
-                    ))}
-                  </div>
-                </button>
-              );
-            })}
+        {/* Product tabs */}
+        <div className="flex flex-wrap gap-2 border-b border-gray-200 mb-10">
+          {products.map((p, index) => {
+            const isActive = active === index;
+            return (
+              <button
+                key={index}
+                onClick={() => selectProduct(index)}
+                className={`px-1 pb-4 -mb-px border-b-2 transition-colors duration-200 cursor-pointer focus:outline-none ${
+                  isActive ? "border-primary" : "border-transparent"
+                }`}
+              >
+                <span className={`font-mono text-xs tracking-widest block mb-1 transition-colors duration-200 ${
+                  isActive ? "text-primary" : "text-gray-400"
+                }`}>
+                  {p.tagline}
+                </span>
+                <span className={`text-lg font-semibold transition-colors duration-200 ${
+                  isActive ? "text-gray-900" : "text-gray-400"
+                }`}>
+                  {p.name}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Product content */}
+        <div className="grid lg:grid-cols-12 gap-10 items-start">
+          {/* Info */}
+          <div className="lg:col-span-4">
+            <p className="text-gray-500 text-base leading-relaxed mb-6">
+              {product.description}
+            </p>
+            <div className="flex flex-wrap gap-x-4 gap-y-1.5 mb-8">
+              {product.features.map((feature, i) => (
+                <span key={i} className="text-xs text-gray-500 flex items-center gap-1.5">
+                  <span className="w-1 h-1 rounded-full bg-gray-400" />
+                  {feature}
+                </span>
+              ))}
+            </div>
+            <a
+              href={product.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md bg-primary text-white font-semibold text-sm hover:bg-primary-dark transition-colors"
+            >
+              Acessar {product.name}
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
           </div>
 
-          {/* Carousel */}
-          <div className="lg:sticky lg:top-24">
-            <div className="relative rounded-lg overflow-hidden border border-gray-200">
-              {/* Slides */}
-              <div className="relative overflow-hidden bg-gray-50" style={{ minHeight: "340px" }}>
-                {currentImages.map((img, i) => (
-                  <div
+          {/* Image gallery */}
+          <div className="lg:col-span-8">
+            {/* Main image */}
+            <div className="relative rounded-lg overflow-hidden border border-gray-200 bg-gray-50 mb-3">
+              <Image
+                src={mainImage.src}
+                alt={mainImage.label}
+                width={1200}
+                height={800}
+                className="w-full h-auto object-contain"
+              />
+
+              {product.images.length > 1 && (
+                <>
+                  <button
+                    onClick={prevImage}
+                    aria-label="Imagem anterior"
+                    className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:border-primary hover:text-primary transition-colors cursor-pointer"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={nextImage}
+                    aria-label="Próxima imagem"
+                    className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:border-primary hover:text-primary transition-colors cursor-pointer"
+                  >
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </>
+              )}
+
+              <span className="absolute bottom-2 left-2 font-mono text-[10px] tracking-widest px-2 py-1 bg-white/95 border border-gray-200 text-gray-700 rounded">
+                {mainImage.label.toUpperCase()}
+              </span>
+
+              <a
+                href={product.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-2 right-2 inline-flex items-center gap-1 px-2.5 py-1 rounded bg-white/95 border border-gray-200 text-gray-700 text-[11px] font-semibold hover:border-primary hover:text-primary transition-colors"
+              >
+                Visitar site
+                <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Thumbnails */}
+            {product.images.length > 1 && (
+              <div className="grid grid-cols-4 sm:grid-cols-5 gap-2">
+                {product.images.map((img, i) => (
+                  <button
                     key={i}
-                    className={`transition-opacity duration-500 ${i === safeSlide ? "opacity-100" : "opacity-0 absolute inset-0 pointer-events-none"}`}
+                    onClick={() => setMainIndex(i)}
+                    className={`rounded-md overflow-hidden border-2 bg-gray-50 transition-colors cursor-pointer ${
+                      i === mainIndex ? "border-primary" : "border-transparent hover:border-gray-300"
+                    }`}
                   >
                     <Image
                       src={img.src}
                       alt={img.label}
-                      width={1200}
-                      height={800}
+                      width={300}
+                      height={200}
                       className="w-full h-auto object-contain"
                     />
-                  </div>
-                ))}
-
-                {/* Prev / Next */}
-                <button
-                  onClick={prev}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 transition-colors"
-                  aria-label="Anterior"
-                >
-                  <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                <button
-                  onClick={next}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 transition-colors"
-                  aria-label="Próximo"
-                >
-                  <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-
-                {/* Label */}
-                <div className="absolute bottom-3 left-3 z-10">
-                  <span className="font-mono text-xs px-2.5 py-1 bg-white border border-gray-200 text-gray-700">
-                    {currentImages[safeSlide].label}
-                  </span>
-                </div>
-              </div>
-
-              {/* Dots */}
-              <div className="flex items-center justify-center gap-2 py-4 bg-white border-t border-gray-200">
-                {currentImages.map((_, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setSlide(i)}
-                    className={`transition-all duration-300 ${
-                      i === safeSlide ? "w-5 h-1 bg-primary" : "w-1 h-1 bg-gray-300 hover:bg-gray-400"
-                    }`}
-                    aria-label={`Slide ${i + 1}`}
-                  />
+                  </button>
                 ))}
               </div>
-            </div>
+            )}
           </div>
         </div>
       </Container>
