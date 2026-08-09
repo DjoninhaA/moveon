@@ -94,12 +94,12 @@ export function ContactForm() {
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
-        <div className="text-center mb-8">
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">
-            Envie sua Solicitação
+      <div className="bg-white p-8 border border-gray-200">
+        <div className="mb-8">
+          <h3 className="font-serif text-2xl text-gray-900 mb-2">
+            Envie sua solicitação
           </h3>
-          <p className="text-gray-600">
+          <p className="text-gray-500 text-sm">
             Preencha o formulário e entraremos em contato
           </p>
         </div>
@@ -120,7 +120,7 @@ export function ContactForm() {
               required
               value={formData.name}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-1 focus:ring-primary focus:border-primary transition-colors outline-none"
               placeholder="Seu nome"
             />
           </div>
@@ -140,7 +140,7 @@ export function ContactForm() {
               required
               value={formData.email}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-1 focus:ring-primary focus:border-primary transition-colors outline-none"
               placeholder="seu@email.com"
             />
           </div>
@@ -159,7 +159,7 @@ export function ContactForm() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
+              className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-1 focus:ring-primary focus:border-primary transition-colors outline-none"
               placeholder="(00) 00000-0000"
             />
           </div>
@@ -178,7 +178,7 @@ export function ContactForm() {
               required
               value={formData.service}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none bg-white"
+              className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-1 focus:ring-primary focus:border-primary transition-colors outline-none bg-white"
             >
               <option value="">Selecione um serviço</option>
               <option value="desenvolvimento">
@@ -206,7 +206,7 @@ export function ContactForm() {
               rows={4}
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none resize-none"
+              className="w-full px-4 py-3 rounded-md border border-gray-300 focus:ring-1 focus:ring-primary focus:border-primary transition-colors outline-none resize-none"
               placeholder="Descreva sua necessidade ou dúvida..."
             />
           </div>
@@ -214,7 +214,7 @@ export function ContactForm() {
           {/* Status Messages */}
           {submitStatus.type && (
             <div
-              className={`p-4 rounded-lg ${
+              className={`p-4 rounded-md ${
                 submitStatus.type === "success"
                   ? "bg-green-50 text-green-800 border border-green-200"
                   : "bg-red-50 text-red-800 border border-red-200"
@@ -228,7 +228,7 @@ export function ContactForm() {
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full px-8 py-4 text-lg font-semibold rounded-lg bg-gradient-to-r from-primary to-primary-dark text-white hover:from-white hover:to-white hover:text-primary hover:shadow-lg hover:scale-[1.02] transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+            className="w-full px-8 py-3.5 text-sm font-semibold rounded-md bg-primary text-white hover:bg-primary-dark transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {isSubmitting ? (
               <span className="flex items-center justify-center gap-2">

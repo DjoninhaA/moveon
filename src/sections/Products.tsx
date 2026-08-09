@@ -10,12 +10,6 @@ const products = [
     tagline: "Gestão de Saúde",
     description:
       "Plataforma completa para clínicas e profissionais de saúde gerenciarem pacientes, agenda, consultas e finanças em um só lugar.",
-    gradient: "from-cyan-500 to-teal-500",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-      </svg>
-    ),
     features: ["Agenda de consultas", "Prontuário eletrônico", "Controle financeiro", "Relatórios"],
     images: [
       { src: "/images/healthy/app-preview.png", label: "Dashboard" },
@@ -30,12 +24,6 @@ const products = [
     tagline: "Gestão de Locações",
     description:
       "Sistema intuitivo para empresas de locação controlarem itens, clientes, contratos e pagamentos com total praticidade.",
-    gradient: "from-primary to-violet-500",
-    icon: (
-      <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
-      </svg>
-    ),
     features: ["Cadastro de itens", "Controle de clientes", "Gestão de contratos", "Pagamentos"],
     images: [
       { src: "/images/locafacil/app-preview-locafacil.png", label: "Dashboard" },
@@ -76,78 +64,55 @@ export function Products() {
   }, [next]);
 
   return (
-    <section id="produtos" className="py-20 md:py-28 relative overflow-hidden bg-white">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.04)_0%,transparent_70%)] pointer-events-none" />
-
-      <Container size="wide" className="relative z-10">
+    <section id="produtos" className="py-20 md:py-28 border-t border-gray-200 bg-white">
+      <Container size="wide">
         {/* Header */}
-        <div className="text-center mb-14">
-          <div className="flex flex-col items-center gap-2 mb-5">
-            <span className="text-xs font-bold uppercase tracking-widest text-primary">Nossos Produtos</span>
-            <div className="w-10 h-0.5 bg-linear-to-r from-primary to-cyan-500 rounded-full" />
-          </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+        <div className="flex items-center gap-3 mb-6">
+          <span className="font-mono text-xs tracking-widest text-gray-400">02 / PRODUTOS</span>
+          <div className="h-px flex-1 max-w-16 bg-gray-200" />
+        </div>
+        <div className="grid md:grid-cols-12 gap-6 mb-14">
+          <h2 className="md:col-span-6 font-serif text-3xl md:text-4xl lg:text-5xl text-gray-900">
             Soluções prontas para o seu negócio
           </h2>
-          <p className="text-gray-500 max-w-xl mx-auto text-base md:text-lg">
-            Produtos desenvolvidos para atender segmentos específicos com excelência
+          <p className="md:col-span-5 md:col-start-8 text-gray-500 text-base leading-relaxed self-end">
+            Produtos desenvolvidos para atender segmentos específicos com excelência.
           </p>
         </div>
 
         {/* Cards + Carousel */}
-        <div className="grid lg:grid-cols-[2fr_3fr] gap-8 items-center">
-          {/* Product cards */}
-          <div className="flex flex-col gap-5">
+        <div className="grid lg:grid-cols-[2fr_3fr] gap-8 items-start">
+          {/* Product list */}
+          <div className="border-t border-gray-200">
             {products.map((product, index) => {
               const isActive = active === index;
               return (
                 <button
                   key={index}
                   onClick={() => { setActive(index); setSlide(0); }}
-                  className={`group relative rounded-2xl p-5 text-left transition-all duration-300 cursor-pointer border focus:outline-none
-                    ${isActive
-                      ? `bg-linear-to-br ${product.gradient} border-transparent shadow-2xl`
-                      : "bg-white border-gray-100 shadow-sm hover:shadow-md hover:border-primary/20"
-                    }`}
+                  className={`group w-full text-left border-b border-gray-200 border-l-2 pl-5 pr-4 py-6 transition-colors duration-200 cursor-pointer focus:outline-none ${
+                    isActive ? "border-l-primary bg-gray-50" : "border-l-transparent hover:bg-gray-50"
+                  }`}
                 >
-                  <div className="flex items-start gap-5">
-                    <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 transition-all duration-300
-                      ${isActive ? "bg-white/20 text-white" : "bg-gray-50 text-primary group-hover:bg-primary/10"}`}
-                    >
-                      {product.icon}
-                    </div>
-                    <div className="flex-1">
-                      <span className={`text-xs font-bold uppercase tracking-widest mb-1 block transition-colors duration-300
-                        ${isActive ? "text-white" : "text-primary"}`}
-                      >
-                        {product.tagline}
+                  <span className={`font-mono text-xs tracking-widest mb-2 block transition-colors duration-200 ${
+                    isActive ? "text-primary" : "text-gray-400"
+                  }`}>
+                    {product.tagline}
+                  </span>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {product.name}
+                  </h3>
+                  <p className="text-sm leading-relaxed mb-4 text-gray-500">
+                    {product.description}
+                  </p>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1.5">
+                    {product.features.map((feature, i) => (
+                      <span key={i} className="text-xs text-gray-500 flex items-center gap-1.5">
+                        <span className="w-1 h-1 rounded-full bg-gray-400" />
+                        {feature}
                       </span>
-                      <h3 className={`text-xl font-bold mb-2 transition-colors duration-300
-                        ${isActive ? "text-white" : "text-gray-900"}`}
-                      >
-                        {product.name}
-                      </h3>
-                      <p className={`text-sm leading-relaxed mb-4 transition-colors duration-300
-                        ${isActive ? "text-white" : "text-gray-500"}`}
-                      >
-                        {product.description}
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {product.features.map((feature, i) => (
-                          <span
-                            key={i}
-                            className={`text-xs font-medium px-3 py-1 rounded-full transition-colors duration-300
-                              ${isActive ? "bg-white/20 text-white" : "bg-gray-100 text-gray-600"}`}
-                          >
-                            {feature}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
+                    ))}
                   </div>
-                  <div className={`mt-5 h-0.5 rounded-full transition-all duration-300
-                    ${isActive ? "w-10 bg-white/50" : "w-0 bg-primary"}`}
-                  />
                 </button>
               );
             })}
@@ -155,7 +120,7 @@ export function Products() {
 
           {/* Carousel */}
           <div className="lg:sticky lg:top-24">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-200/60 bg-gray-50">
+            <div className="relative rounded-lg overflow-hidden border border-gray-200">
               {/* Slides */}
               <div className="relative overflow-hidden bg-gray-50" style={{ minHeight: "340px" }}>
                 {currentImages.map((img, i) => (
@@ -176,7 +141,7 @@ export function Products() {
                 {/* Prev / Next */}
                 <button
                   onClick={prev}
-                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/90 shadow flex items-center justify-center hover:bg-white transition-colors"
+                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 transition-colors"
                   aria-label="Anterior"
                 >
                   <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -185,7 +150,7 @@ export function Products() {
                 </button>
                 <button
                   onClick={next}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-9 h-9 rounded-full bg-white/90 shadow flex items-center justify-center hover:bg-white transition-colors"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 z-10 w-8 h-8 rounded-full bg-white border border-gray-200 flex items-center justify-center hover:border-gray-400 transition-colors"
                   aria-label="Próximo"
                 >
                   <svg className="w-4 h-4 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -195,20 +160,20 @@ export function Products() {
 
                 {/* Label */}
                 <div className="absolute bottom-3 left-3 z-10">
-                  <span className="text-xs font-semibold px-3 py-1 rounded-full bg-black/40 text-white backdrop-blur-sm">
+                  <span className="font-mono text-xs px-2.5 py-1 bg-white border border-gray-200 text-gray-700">
                     {currentImages[safeSlide].label}
                   </span>
                 </div>
               </div>
 
               {/* Dots */}
-              <div className="flex items-center justify-center gap-2 py-4 bg-white">
+              <div className="flex items-center justify-center gap-2 py-4 bg-white border-t border-gray-200">
                 {currentImages.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setSlide(i)}
-                    className={`rounded-full transition-all duration-300 ${
-                      i === safeSlide ? "w-6 h-2 bg-primary" : "w-2 h-2 bg-gray-300 hover:bg-gray-400"
+                    className={`transition-all duration-300 ${
+                      i === safeSlide ? "w-5 h-1 bg-primary" : "w-1 h-1 bg-gray-300 hover:bg-gray-400"
                     }`}
                     aria-label={`Slide ${i + 1}`}
                   />

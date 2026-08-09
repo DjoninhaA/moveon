@@ -1,4 +1,4 @@
-import { Hero, Services, Benefits, HowItWorks, Products, CTA } from "@/sections";
+import { Hero, Services, Benefits, HowItWorks, Products, LandingPages, CTA } from "@/sections";
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <Hero />
       <Products />
       <Services />
+      <LandingPages />
       <Benefits />
       <HowItWorks />
       <CTA />
