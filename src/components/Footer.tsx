@@ -14,7 +14,7 @@ export function Footer() {
           <div className="lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-6">
               <Image
-                src="/images/logo.png"
+                src="/images/logo-move.png"
                 alt={siteConfig.name}
                 width={150}
                 height={10}

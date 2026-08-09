@@ -28,14 +28,15 @@ export function Header() {
       >
         <nav className="flex items-center justify-between h-16 px-6">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Link href="#home" className="flex items-center gap-2 shrink-0">
             <Image
-              src="/images/logo.png"
+              src="/images/logo-move.png"
               alt={siteConfig.name}
-              width={160}
-              height={80}
-              className="object-contain"
+              width={60}
+              height={60}
+              className="w-12 h-12 object-contain"
             />
+            <span className="text-lg font-semibold text-gray-900">Move On</span>
           </Link>
 
           {/* Desktop Navigation */}
