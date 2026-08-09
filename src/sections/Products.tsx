@@ -64,7 +64,7 @@ export function Products() {
   }, [next]);
 
   return (
-    <section id="produtos" className="py-20 md:py-28 border-t border-gray-200 bg-white">
+    <section id="produtos" className="min-h-screen flex flex-col justify-center py-20 md:py-28 border-t border-gray-200 bg-white">
       <Container size="wide">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">

@@ -3,7 +3,7 @@ import { siteConfig } from "@/config/site";
 
 export function CTA() {
   return (
-    <section id="contato" className="py-20 md:py-28 border-t border-gray-200 bg-[#FAFAF9]">
+    <section id="contato" className="min-h-screen flex flex-col justify-center py-20 md:py-28 border-t border-gray-200 bg-[#FAFAF9]">
       <Container size="wide">
         {/* CTA block */}
         <div className="border border-gray-200 bg-white p-8 md:p-14 mb-16">

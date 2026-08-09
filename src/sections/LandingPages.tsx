@@ -48,7 +48,7 @@ const portfolio = [
 
 export function LandingPages() {
   return (
-    <section id="portfolio" className="py-20 md:py-28 border-t border-gray-200 bg-white">
+    <section id="portfolio" className="min-h-screen flex flex-col justify-center py-20 md:py-28 border-t border-gray-200 bg-white">
       <Container size="wide">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">

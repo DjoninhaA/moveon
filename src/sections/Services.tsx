@@ -55,7 +55,7 @@ export function Services() {
   const [active, setActive] = useState(1);
 
   return (
-    <section id="servicos" className="py-20 md:py-28 border-t border-white/10 bg-linear-to-b from-[#1c0f33] to-[#120821]">
+    <section id="servicos" className="min-h-screen flex flex-col justify-center py-20 md:py-28 border-t border-white/10 bg-linear-to-b from-[#1c0f33] to-[#120821]">
       <Container size="wide">
         {/* Section Header */}
         <div className="grid md:grid-cols-12 gap-6 mb-14 items-end">

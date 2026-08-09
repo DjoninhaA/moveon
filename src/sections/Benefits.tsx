@@ -59,7 +59,7 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section id="beneficios" className="py-20 md:py-28 bg-gray-900">
+    <section id="beneficios" className="min-h-screen flex flex-col justify-center py-20 md:py-28 bg-gray-900">
       <Container size="wide">
         <div className="grid lg:grid-cols-12 gap-14">
           {/* Left - Content */}
