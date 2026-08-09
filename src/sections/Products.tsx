@@ -68,7 +68,7 @@ export function Products() {
       <Container size="wide">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <span className="font-mono text-xs tracking-widest text-gray-400">02 / PRODUTOS</span>
+          <span className="font-mono text-base tracking-widest text-gray-400">02 / PRODUTOS</span>
           <div className="h-px flex-1 max-w-16 bg-gray-200" />
         </div>
         <div className="grid md:grid-cols-12 gap-6 mb-14">

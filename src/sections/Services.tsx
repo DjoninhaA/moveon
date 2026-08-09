@@ -61,7 +61,7 @@ export function Services() {
         <div className="grid md:grid-cols-12 gap-6 mb-14 items-end">
           <div className="md:col-span-8">
             <div className="flex items-center gap-3 mb-6">
-              <span className="font-mono text-xs tracking-widest text-purple-300/60">03 / SERVIÇOS</span>
+              <span className="font-mono text-base tracking-widest text-purple-300/60">03 / SERVIÇOS</span>
               <div className="h-px flex-1 max-w-16 bg-white/10" />
             </div>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white">

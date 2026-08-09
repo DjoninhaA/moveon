@@ -30,11 +30,11 @@ export function HowItWorks() {
   const [active, setActive] = useState(0);
 
   return (
-    <section id="como-funciona" className="min-h-screen flex flex-col justify-center py-20 md:py-28 border-t border-white/10 bg-linear-to-b from-[#1c0f33] to-[#120821]">
+    <section id="como-funciona" className="py-14 md:py-20 border-t border-white/10 bg-linear-to-b from-[#1c0f33] to-[#120821]">
       <Container size="wide">
         {/* Section Header */}
         <div className="flex items-center gap-3 mb-6">
-          <span className="font-mono text-xs tracking-widest text-purple-300/60">06 / METODOLOGIA</span>
+          <span className="font-mono text-base tracking-widest text-purple-300/60">06 / METODOLOGIA</span>
           <div className="h-px flex-1 max-w-16 bg-white/10" />
         </div>
         <div className="grid md:grid-cols-12 gap-6 mb-16">

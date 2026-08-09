@@ -7,7 +7,7 @@ export function Hero() {
         <div className="grid lg:grid-cols-12 gap-8">
           <div className="lg:col-span-9">
             <div className="flex items-center gap-3 mb-8">
-              <span className="font-mono text-xs tracking-widest text-purple-300/60">01 / SOFTWARE STUDIO</span>
+              <span className="font-mono text-base tracking-widest text-purple-300/60">01 / SOFTWARE STUDIO</span>
               <div className="h-px flex-1 max-w-16 bg-white/10" />
             </div>
 

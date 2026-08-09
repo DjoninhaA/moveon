@@ -26,7 +26,7 @@ const portfolio = [
     description: "Landing page profissional para psicóloga especialista em terapia de casal e relacionamentos.",
     tag: "Saúde Mental",
     image: "/images/landingpages/adriana-grando.png",
-    url: null,
+    url: "https://www.adrianagrando.com.br/",
   },
   {
     name: "Benassi Odontologia",
@@ -52,7 +52,7 @@ export function LandingPages() {
       <Container size="wide">
         {/* Header */}
         <div className="flex items-center gap-3 mb-6">
-          <span className="font-mono text-xs tracking-widest text-gray-400">04 / PORTFÓLIO</span>
+          <span className="font-mono text-base tracking-widest text-gray-400">04 / PORTFÓLIO</span>
           <div className="h-px flex-1 max-w-16 bg-gray-200" />
         </div>
         <div className="grid md:grid-cols-12 gap-6 mb-14">

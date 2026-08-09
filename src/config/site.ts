@@ -40,4 +40,7 @@ export const siteConfig = {
 
   // Mensagem padrão do WhatsApp
   whatsappMessage: "Olá! Gostaria de saber mais sobre os serviços da Move On.",
+
+  // Mensagem do WhatsApp para agendamento de demonstração
+  whatsappDemoMessage: "Olá! Gostaria de agendar uma demonstração dos serviços da Move On.",
 } as const;

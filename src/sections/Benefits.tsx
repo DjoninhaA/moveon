@@ -59,13 +59,13 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section id="beneficios" className="min-h-screen flex flex-col justify-center py-20 md:py-28 bg-gray-900">
+    <section id="beneficios" className="py-14 md:py-20 bg-gray-900">
       <Container size="wide">
         <div className="grid lg:grid-cols-12 gap-14">
           {/* Left - Content */}
           <div className="lg:col-span-4">
             <div className="flex items-center gap-3 mb-6">
-              <span className="font-mono text-xs tracking-widest text-gray-500">05 / BENEFÍCIOS</span>
+              <span className="font-mono text-base tracking-widest text-gray-500">05 / BENEFÍCIOS</span>
             </div>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-white mb-6 leading-tight">
               Benefícios que fazem a diferença

@@ -3,15 +3,17 @@ import { siteConfig } from "@/config/site";
 
 export function CTA() {
   return (
-    <section id="contato" className="min-h-screen flex flex-col justify-center py-20 md:py-28 border-t border-gray-200 bg-[#FAFAF9]">
-      <Container size="wide">
+    <section id="contato" className="relative min-h-screen flex flex-col justify-center py-20 md:py-28 border-t border-gray-200 bg-[#FAFAF9] overflow-hidden">
+      <div className="pointer-events-none absolute -top-32 right-0 w-md h-112 rounded-full bg-primary/10 blur-3xl" />
+      <Container size="wide" className="relative">
         {/* CTA block */}
-        <div className="border border-gray-200 bg-white p-8 md:p-14 mb-16">
+        <div className="relative border border-gray-200 bg-white p-8 md:p-14 mb-16 overflow-hidden">
+          <div className="absolute top-0 left-0 h-1 w-24 bg-linear-to-r from-primary to-primary-light" />
           <div className="grid lg:grid-cols-12 gap-10">
             <div className="lg:col-span-7">
               <div className="flex items-center gap-3 mb-6">
-                <span className="font-mono text-xs tracking-widest text-gray-400">07 / CONTATO</span>
-                <div className="h-px flex-1 max-w-16 bg-gray-200" />
+                <span className="font-mono text-base tracking-widest text-primary">07 / CONTATO</span>
+                <div className="h-px flex-1 max-w-16 bg-primary/20" />
               </div>
 
               <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-gray-900 mb-6 leading-tight">
@@ -35,14 +37,19 @@ export function CTA() {
                   </svg>
                   {siteConfig.cta.primary}
                 </a>
-                <button className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border border-gray-300 text-gray-900 font-semibold text-sm hover:border-gray-900 transition-colors">
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsapp}?text=${encodeURIComponent(siteConfig.whatsappDemoMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-md border border-gray-300 text-gray-900 font-semibold text-sm hover:border-gray-900 transition-colors"
+                >
                   Agendar Demonstração
-                </button>
+                </a>
               </div>
             </div>
 
             {/* Contact Info */}
-            <div className="lg:col-span-5 lg:border-l lg:border-gray-200 lg:pl-10 flex flex-col justify-end gap-6">
+            <div className="lg:col-span-5 lg:border-l lg:border-gray-200 lg:pl-10 flex flex-col justify-center gap-6">
               <div>
                 <p className="font-mono text-[11px] tracking-widest text-gray-400 mb-1">EMAIL</p>
                 <p className="text-gray-900 text-sm">{siteConfig.contact.email}</p>
